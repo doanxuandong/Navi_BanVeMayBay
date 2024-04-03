@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MENU>
+  <DONG>
+    <mamenu>1</mamenu>
+    <tieude1>Cập nhật chuyến bay</tieude1>
+    <link>capnhat_chuyenbay.aspx</link>
+  </DONG>
+  <DONG>
+    <mamenu>2</mamenu>
+    <tieude1>Cập nhat khuyến mãi</tieude1>
+    <link>capnhat_khuyenmai.aspx</link>
+  </DONG>
+  <DONG>
+    <mamenu>3</mamenu>
+    <tieude1>Cập nhật dm ngân hàng</tieude1>
+    <link>capnhat_dmnganhang.aspx</link>
+  </DONG>
+  <DONG>
+    <mamenu>4</mamenu>
+    <tieude1>Thống kê báo cáo</tieude1>
+    <link>Thongke_datve.aspx</link>
+  </DONG>
+
+</MENU>

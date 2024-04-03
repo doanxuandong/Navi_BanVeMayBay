@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MENU>
+  <DONG>
+    <mamenu>1</mamenu>
+    <tieude>Trang Chủ</tieude>
+    <link>Trang_chu.aspx</link>
+  </DONG>
+  <DONG>
+    <mamenu>2</mamenu>
+    <tieude>Đặt Vé</tieude>
+    <link>Tim_chuyenbay.aspx</link>
+  </DONG>
+  <DONG>
+    <mamenu>3</mamenu>
+    <tieude>Thanh Toán</tieude>
+    <link>thanhtoan.aspx</link>
+  </DONG>  
+  <DONG>
+    <mamenu>4</mamenu>
+    <tieude>Khuyến mãi</tieude>
+    <link>khuyen_mai.aspx</link>
+  </DONG>
+  
+  <DONG>
+    <mamenu>5</mamenu>
+    <tieude>Hướng dẫn đặt vé</tieude>
+    <link>Huongdan_datve.aspx</link>
+  </DONG>
+  <DONG>
+    <mamenu>6</mamenu>
+    <tieude>DVKhách Hàng</tieude>
+    <link>Lien_he.aspx</link>
+  </DONG>
+
+
+
+
+</MENU>

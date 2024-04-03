@@ -1,0 +1,101 @@
+﻿body
+{
+    font-family: helvetica, arial, sans-serif;
+    font-size:19px;
+    background: #e3e3e3;
+    background-image:while;/* url('../img/hinhnen.png');/*them doan này là dc hinh nền*/
+    
+}
+
+/* MENU */
+
+#nav {
+ background: #e5e5e5;
+ float: left;
+ margin: 0; padding: 0;
+ border: none;/*0.5px solid white;*/
+ border-bottom: none;
+}
+
+#nav li a, #nav li {
+ float: left;
+}
+
+#nav li {
+ list-style: none;
+ position: relative;
+}
+
+#nav li a {
+ padding: 0.4em 1.4em;
+ text-decoration: none;
+ color: white;
+ background: #FF0000;
+ background: -moz-linear-gradient(top, Red #3c3c3c 1px, #FF0000 25px);
+ background: -webkit-gradient(linear, left top, left 25, from(Red), color-stop(4%, #DD0000), to(#FF0000));
+ border-right: 0;/*0.1px solid #DD0000;*/
+ border-left: 0;/*1px solid #FF0000;*/
+ border-bottom: 0;/*1px solid #DD0000;*/
+ border-top: 0;/*1px solid #DD0000;*/
+ font-weight:bold;
+}
+
+#nav li a:hover 
+{
+    padding: 0.4em 1.4em;
+ text-decoration: none;
+ color: #FFCC00;
+ background: #FF0000;
+ background: -moz-linear-gradient(top, #DD0000, #FF0000);
+ background: -webkit-gradient(linear, left top, left bottom, from(#DD0000), to(#FF0000));
+}
+
+
+/* Submenu */
+
+.hasChildren {
+	position: absolute;
+	width: 5px; height: 5px;
+	background: Red;
+	right : 0;
+	bottom: 0;
+}
+
+#nav li ul {
+ display: none;
+ position: absolute;
+ left: 0;
+ top: 100%;
+ padding: 0; margin: 0;
+}
+
+#nav li:hover > ul {
+ display: block;
+}
+
+#nav li ul li, #nav li ul li a {
+ float: none;
+}
+
+#nav li ul li {
+ _display: inline; /* for IE6 */
+}
+
+#nav li ul li a {
+ width: 150px;
+ display: block;
+}
+
+/* SUBSUB Menu */
+
+#nav li ul li ul {
+ display: none;
+}
+
+#nav li ul li:hover ul {
+ left: 100%;
+ top: 0;
+}
+
+
+#nav li ul 

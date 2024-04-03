@@ -1,0 +1,441 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Master_trangchu.master.cs" Inherits="MasterPage" %>
+
+<%@ Register src="user_Control/menu.ascx" tagname="menu" tagprefix="uc1" %>
+
+<%@ Register src="sidleshow/WebUserControl.ascx" tagname="WebUserControl" tagprefix="uc2" %>
+
+<%@ Register src="user_Control/Tim_chuyen_bay.ascx" tagname="Tim_chuyen_bay" tagprefix="uc3" %>
+
+<%@ Register src="sidleshow/quangcao.ascx" tagname="quangcao" tagprefix="uc4" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Navi Air Travel</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        
+        </style>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+<link href="/NaVi/css/imgbubbles.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+
+/*CSS for 2 demos on the page*/
+#orbs li{
+width: 65px; /*width of image container. Should be wider than contained images (before bubbling) */
+height:60px; /*height of image container. Should be taller than contained images (before bubbling) */
+}
+
+#orbs li img{
+width: 55px; /*width of each image before bubbling*/
+height: 60px;
+right: 472px;
+    }
+
+#squares li{
+width: 45px; /*width of image container. Must be wider than contained images (before bubbling) */
+height:40px; /*height of image container. Must be taller than contained images (before bubbling) */
+}
+
+#squares li img{
+width: 31px; /*width of each image before bubbling*/
+height: 31px; /*height of each image*/
+}
+
+    #I1
+    {
+        height: 262px;
+        width: 586px;
+    }
+
+    </style>
+
+<script type="text/javascript" src="/NaVi/js/imgbubbles.js">
+
+    /***********************************************
+    * Image Bubbles effect- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+    * Please keep this notice intact
+    * Visit Dynamic Drive at http://www.dynamicdrive.com/ for this script and 100s more
+    ***********************************************/
+
+</script>
+
+<script type="text/javascript">
+
+    jQuery(document).ready(function ($) {
+        $('ul#orbs').imgbubbles({ factor: 1.1 }) //add bubbles effect to UL id="orbs"
+        $('ul#squares').imgbubbles({ factor: 2.5 }) //add bubbles effect to UL id="squares"
+    })
+
+</script>
+
+</head>
+<body>
+    <form id="form1" runat="server">           
+
+
+    <table align="center" cellpadding="0" cellspacing="0" 
+        style="background-color: #FFFFFF">
+        <tr>
+            <td align="center" height="160px" width="1000px" 
+                valign="top" 
+                style="background-image: url('/NaVi/img/Hinh/hinh_banner 2.jpg'); background-repeat: no-repeat; width: 1000px;">
+                <br />
+                
+
+            </td>
+        </tr>
+        <tr>
+            <td align="center" width="1000px" bgcolor="Red" valign="top">
+                <uc1:menu ID="menu1" runat="server" />
+                
+                <br />
+                
+            </td>
+        </tr>
+        
+        <tr>
+            <td align="center" width="1000px">
+                <table align="center" cellpadding="0" cellspacing="0" 
+                    
+                    style="color: #FF9933; font-family: Arial, Helvetica, sans-serif; font-size: medium">
+                    <tr>
+                        <td align="center" valign="top" width="500px" style="width: 1000px">
+                            <table align="center" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td width="500px" align="center" colspan="2" style="width: 1000px">
+                                        
+                                           <table align="center" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td valign="top" width="850px">
+                                            <marquee style="color: #0033CC; font-weight: 700;"> Navi bán vé máy bay & hỗ trợ khách hàng tất cả các ngày trong tuần </marquee></td>
+                                                    <td valign="top" width="150px" align="center">
+                                        
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                                                
+                                            <asp:LinkButton ID="LinkButton1" runat="server" style="font-size: 17px; font-weight: 700;" 
+                                                            Width="35px">Login</asp:LinkButton>                
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        
+                                     </td>
+                                </tr>
+                      <tr>
+                         <td width="500px" align="center" valign="top" bgcolor="Transparent">
+                            
+                                <uc3:Tim_chuyen_bay ID="Tim_chuyen_bay1" runat="server" />
+                            <br />
+                             <br />
+                              </td>
+                               <td width="500px" align="center" valign="top">                                    
+                                     <table align="center" cellpadding="0" cellspacing="0">
+                                         <tr>
+                                             <td width="20px">
+                                                 &nbsp;</td>
+                                             <td width="475px">
+                                               
+                                                 <uc4:quangcao ID="quangcao1" runat="server" />
+                                             </td>
+                                         </tr>
+                                         <tr>
+                                             <td width="20px">
+                                                 &nbsp;</td>
+                                             <td width="475px">
+                                               
+                                                 &nbsp;</td>
+                                         </tr>
+                                         <tr>
+                                             <td width="20px">
+                                                 &nbsp;</td>
+                                             <td width="475px">
+                                               
+                                                 <h1 style="background: transparent; border-width: 0px 0px 1px; border-top-style: initial; border-right-style: initial; border-bottom-style: solid; border-left-style: initial; border-top-color: initial; border-right-color: initial; border-bottom-color: rgb(221, 221, 221); border-left-color: initial; border-image: initial; font-size: 1.6em; outline: 0px; vertical-align: baseline; margin: 0px; padding: 5px 10px; font-weight: normal; line-height: 31.2px; color: rgb(0, 129, 255); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+                                                     SĂN VÉ MÁY BAY GIÁ RẺ</h1>
+                                                 <p style="background: transparent; border: 0px; font-size: 13px; outline: 0px; vertical-align: baseline; margin: 0px; padding: 5px 10px; text-align: justify; line-height: 19.5px; color: rgb(0, 0, 0); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+                                                     <strong style="background: transparent; border: 0px; font-size: 13px; outline: 0px; vertical-align: baseline; margin: 0px; padding: 0px;">
+                                                     Hệ thống săn vé máy bay khuyến mãi</strong><span class="Apple-converted-space">&nbsp;</span>Vietjet, 
+                                                     Vietnam Airline, Jetstar. Tìm và đặt vé online, so sánh giá vé từ hơn 200 hãng 
+                                                     hàng không quốc tế và nội địa. Hình thức thanh toán linh hoạt qua internet 
+                                                     banking, Visa, Master...</p>
+                                                 <p style="background: transparent; border: 0px; font-size: 13px; outline: 0px; vertical-align: baseline; margin: 0px; padding: 5px 10px; text-align: justify; line-height: 19.5px; color: rgb(0, 0, 0); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+                                                     <strong style="background: transparent; border: 0px; font-size: 13px; outline: 0px; vertical-align: baseline; margin: 0px; padding: 0px;">
+                                                     Đặt vé online - Giao vé tận nhà</strong>, đội ngũ booker chuyên nghiệp tư vấn 
+                                                     nhiệt tình. Cam kết dịch vụ làm hài lòng tất cả quý khách.</p>
+                                             </td>
+                                         </tr>
+                                         </table>
+                                </td>
+                       </tr>
+                            
+                            </table>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" width="1000px">
+        
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        
+            </td>
+        </tr>
+        <tr>
+            <td align="center" width="1000px">
+        
+        
+        
+        </asp:ContentPlaceHolder>
+        
+                <br />
+        
+            </td>
+        </tr>
+<%------Ban do---------%>
+        <tr>
+            <td >
+                
+                <table align="center" cellpadding="0" cellspacing="0" style="background-color: #FFFFFF">
+                    <tr>
+                        <td width="1000px">
+                            <table align="center" cellpadding="0" cellspacing="0" style="background-color: #FFFFFF">
+                                <tr>
+                                    <td valign="top" width="490px">
+                                        <p class="big-font-normal" 
+                                            style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px !important; padding: 0px; border: 0px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-weight: normal; font-stretch: inherit; font-size: 18px; vertical-align: baseline; font-family: Arial, Helvetica, sans-serif; line-height: 24px; color: rgb(11, 30, 111); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">
+                                            <span class="big-font-header" 
+                                                style="margin: 0px; padding: 0px 0px 0px 7px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: 26px; vertical-align: baseline; font-family: Arial, Helvetica, sans-serif; line-height: 24px; letter-spacing: -2px; color: rgb(20, 58, 131);">
+                                            Các hình thức thanh toán</span></p>
+                                        <div class="blank10" 
+                                            style="margin: 0px; padding: 0px; border: 0px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-weight: normal; font-stretch: inherit; font-size: medium; vertical-align: baseline; font-family: Arial, Helvetica, sans-serif; line-height: 18px; height: 10px; color: rgb(0, 0, 0); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">
+                                        </div>
+                                        <div class="line7" 
+                                            style="margin: 0px; padding: 0px; border-width: 0px 0px 1px; border-top-style: initial; border-right-style: initial; border-bottom-style: dotted; border-left-style: initial; border-top-color: initial; border-right-color: initial; border-bottom-color: rgb(205, 205, 205); border-left-color: initial; border-image: initial; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-weight: normal; font-stretch: inherit; font-size: medium; vertical-align: baseline; font-family: Arial, Helvetica, sans-serif; line-height: 18px; height: 1px; color: rgb(0, 0, 0); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">
+                                        </div>
+                                        <div class="clr" 
+                                            style="border-style: none; border-color: inherit; border-width: 0px; margin: 0px; padding: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; vertical-align: baseline; font-family: Arial, Helvetica, sans-serif; line-height: 18px; clear: both; width: 447px;">
+                                            <span class="imgIcon" 
+                                                style="border-style: none; border-color: inherit; border-width: 0px; margin: 0px 10px 0px 0px; padding: 0px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-weight: normal; font-stretch: inherit; font-size: medium; font-family: Arial, Helvetica, sans-serif; line-height: 18px; float: left; width: 45px; color: rgb(0, 0, 0); letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); height: 51px;">
+                                            <img alt="" src="http://vemaybayonline.net.vn/Images/Newversion/MoneyIcon.png" 
+                                                style="border-style: none; border-color: inherit; border-width: 0px; margin: 0px; padding: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; font-family: Arial, Helvetica, sans-serif; line-height: 18px; height: 39px; width: 41px;" /></span><br />
+                                            <div class="textHTTT" 
+                                                style="margin: 0px; padding: 0px; border: 0px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-weight: normal; font-stretch: inherit; font-size: medium; font-family: Arial, Helvetica, sans-serif; line-height: 18px; float: right; width: 425px; color: rgb(0, 0, 0); letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">
+                                                <h5 style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: normal; font-stretch: inherit; font-size: 15px; font-family: Arial, Helvetica, sans-serif; line-height: 18px; text-transform: uppercase; color: rgb(5, 81, 153);">
+                                                    THANH TOÁN BẰNG TIỀN MẶT TẠI VĂN PHÒNG ABAY</h5>
+                                                <p style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 12px; font-family: Arial, Helvetica, sans-serif; line-height: 18px; color: rgb(68, 68, 68);">
+                                                    Sau khi đặt hàng thành công, Quý khách vui lòng qua văn phòng ABAY để thanh toán 
+                                                    và nhận vé.</p>
+                                            </div>
+                                        </div>
+                                        <ul class="wPttt" 
+                                            style="border-style: none; border-color: inherit; border-width: 0px; margin: 5px 0px 10px; padding: 8px 0px 0px 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-weight: normal; font-stretch: inherit; font-size: medium; vertical-align: baseline; font-family: Arial, Helvetica, sans-serif; line-height: 18px; list-style: none; height: 447px; background: rgb(255, 255, 255) url('https://www.abay.vn/images/AbayV2/bg-service.jpg') no-repeat left bottom; color: rgb(0, 0, 0); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+                                            <li style="margin: 18px 0px 5px; padding: 0px 0px 5px; border-image: initial; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 14px; vertical-align: baseline; font-family: Arial, Helvetica, sans-serif; line-height: 18px; background: url('https://www.abay.vn/images/AbayV2/list-icon2.png') no-repeat left center; color: rgb(7, 7, 87); border-left-style: none; border-left-color: inherit; border-left-width: 0px; border-right-style: none; border-right-color: inherit; border-right-width: 0px; border-top-style: none; border-top-color: inherit; border-top-width: 0px; border-bottom-style: none !important; border-bottom-color: inherit !important; border-bottom-width: medium;">
+                                                <div class="imgPttt" 
+                                                    style="margin: 0px 5px 0px 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; vertical-align: baseline; font-family: Arial, Helvetica, sans-serif; line-height: 18px; float: left; width: 58px;">
+                                                    <img alt="Thanh toán qua chuyển khoản" class="thumb" 
+                                                        src="https://www.abay.vn/images/NewAbayImg/bank.jpg" 
+                                                        style="margin: 0px 5px 0px 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; vertical-align: baseline; font-family: Arial, Helvetica, sans-serif; line-height: 18px; float: left; max-width: 56px; max-height: 67px;" 
+                                                        title="Thanh toán qua chuyển khoản cho Abay" /></div>
+                                                <p style="border-style: none; border-color: inherit; border-width: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px !important; padding: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 12px; vertical-align: baseline; font-family: Arial, Helvetica, sans-serif; line-height: 18px; float: left; display: block; width: 388px;">
+                                                    <b style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; font-size: inherit; vertical-align: baseline; font-family: Arial, Helvetica, sans-serif; line-height: 18px; text-transform: uppercase; color: rgb(0, 0, 0);">
+                                                    THANH TOÁN QUA CHUYỂN KHOẢN</b><br />
+                                                    <span style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; vertical-align: baseline; font-family: Arial, Helvetica, sans-serif; line-height: 17px; color: rgb(87, 87, 87);">
+                                                    Quý khách có thể thanh toán cho chúng tôi bằng cách chuyển khoản trực tiếp tại 
+                                                    ngân hàng, chuyển qua thẻ ATM, hoặc qua Internet banking.</span></p>
+                                                <div style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; vertical-align: baseline; font-family: Arial, Helvetica, sans-serif; line-height: 18px; text-align: center; width: 430px; float: left;">
+                                                    <img alt="Argibank, Techcombank, Bidv, ACB,..." 
+                                                        src="https://www.abay.vn/images/NewAbayImg/PartnerV2.jpg" 
+                                                        style="margin: 5px 0px 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; vertical-align: baseline; font-family: Arial, Helvetica, sans-serif; line-height: 18px;" 
+                                                        title="Các ngân hàng" /></div>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td width="500px" valign="top">
+                                        <table align="center" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td valign="top" width="20px">
+                                                    &nbsp;</td>
+                                                <td valign="top" width="490px">
+                                                    
+                                                    <h3 style="border-bottom: 1px solid rgb(217, 217, 217); margin: 0px; padding: 0px; border-top-style: initial; border-right-style: initial; border-left-style: initial; border-top-color: initial; border-right-color: initial; border-left-color: initial; border-image: initial; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; font-family: Arial, Helvetica, sans-serif; line-height: 18px; background: rgb(255, 255, 255) url('http://vemaybayonline.net.vn/Images/Newversion/bgbarTrangchu.png') repeat-x; height: 43px; border-radius: 5px 5px 0px 0px; color: rgb(0, 0, 0); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; border-left-width: 0px; border-right-width: 0px; border-top-width: 0px;">
+                                                        <span style="border-style: none; border-color: inherit; border-width: 0px; margin: 0px 0px 0px 20px; padding: 0px 0px 0px 55px; font-style: inherit; font-variant: inherit; font-weight: normal; font-stretch: inherit; font-size: 19px; font-family: Arial, Helvetica, sans-serif; line-height: 43px; background: url('http://vemaybayonline.net.vn/Images/Newversion/iconGiatri.png') no-repeat left center; display: block; height: 43px; text-transform: uppercase; color: rgb(5, 81, 153);">
+                                                        GIÁ TRỊ CHÚNG TÔI MANG LẠI</span></h3>
+                                                    <ul style="margin: 19px 20px 25px; padding: 0px; border: 0px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-weight: normal; font-stretch: inherit; font-size: medium; font-family: Arial, Helvetica, sans-serif; line-height: 18px; list-style: none; color: rgb(0, 0, 0); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">
+                                                        <li style="margin: 0px; padding: 14px 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; font-family: Arial, Helvetica, sans-serif; line-height: 18px;">
+                                                            <p style="border-style: none; border-color: inherit; border-width: 0px; margin: 0px; padding: 0px 0px 0px 28px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 14px; font-family: Arial, Helvetica, sans-serif; line-height: 18px; color: rgb(5, 81, 153); background: url('http://vemaybayonline.net.vn/Images/Newversion/tickv2.png') no-repeat left center;">
+                                                                Đặt vé nhanh chóng chỉ với vài cú click chuột</p>
+                                                        </li>
+                                                        <li style="margin: 0px; padding: 14px 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; font-family: Arial, Helvetica, sans-serif; line-height: 18px;">
+                                                            <p style="border-style: none; border-color: inherit; border-width: 0px; margin: 0px; padding: 0px 0px 0px 28px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 14px; font-family: Arial, Helvetica, sans-serif; line-height: 18px; color: rgb(5, 81, 153); background: url('http://vemaybayonline.net.vn/Images/Newversion/tickv2.png') no-repeat left center;">
+                                                                Các chương trình khuyến mại giảm giá hấp dẫn</p>
+                                                        </li>
+                                                        <li style="margin: 0px; padding: 14px 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; font-family: Arial, Helvetica, sans-serif; line-height: 18px;">
+                                                            <p style="border-style: none; border-color: inherit; border-width: 0px; margin: 0px; padding: 0px 0px 0px 28px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 14px; font-family: Arial, Helvetica, sans-serif; line-height: 18px; color: rgb(5, 81, 153); background: url('http://vemaybayonline.net.vn/Images/Newversion/tickv2.png') no-repeat left center;">
+                                                                Hỗ trợ và chăm sóc khách hàng 24/24</p>
+                                                        </li>
+                                                        <li style="margin: 0px; padding: 14px 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; font-family: Arial, Helvetica, sans-serif; line-height: 18px;">
+                                                            <p style="border-style: none; border-color: inherit; border-width: 0px; margin: 0px; padding: 0px 0px 0px 28px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 14px; font-family: Arial, Helvetica, sans-serif; line-height: 18px; color: rgb(5, 81, 153); background: url('http://vemaybayonline.net.vn/Images/Newversion/tickv2.png') no-repeat left center;">
+                                                                Chứng nhận đảm bảo là đại lý vé máy bay đạt nhiều danh hiệu uy tín chất lượng</p>
+                                                        </li>
+                                                        <li style="margin: 0px; padding: 14px 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; font-family: Arial, Helvetica, sans-serif; line-height: 18px;">
+                                                            <p style="border-style: none; border-color: inherit; border-width: 0px; margin: 0px; padding: 0px 0px 0px 28px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 14px; font-family: Arial, Helvetica, sans-serif; line-height: 18px; color: rgb(5, 81, 153); background: url('http://vemaybayonline.net.vn/Images/Newversion/tickv2.png') no-repeat left center;">
+                                                                Thanh toán tiện lợi</p>
+                                                        </li>
+                                                    </ul>
+                                                    <br class="Apple-interchange-newline" />
+                                                    
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                
+            </td>
+        </tr>
+<%--------------------------%>
+       
+        
+<%------hieu ung lo go cac ngan hang------%>  
+        
+        
+<%------------------%>
+        <tr>
+            <td align="center" width="1000px">
+                           <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1RrNF-aB-xOV7LjGb-nj7qETloss" 
+                               id="I1" name="I1"></iframe>
+                                                <br />
+                                                </td>
+        </tr>
+        <tr>
+            <td align="center" bgcolor="#168FB1" width="1000px">
+                <table align="center" cellpadding="0" cellspacing="0" 
+                    
+                    
+                    style="color: #FFFFFF; font-size: small; background-color: #0099CC;">
+                    <tr>
+                        <td width="100px">
+                            &nbsp;</td>
+                        <td width="800px" style="text-align: center">
+                            CÔNG TY TNHH THƯƠNG MẠI - DỊCH VỤ - XÂY DỰNG NAVI<br />
+                            VPC: 17/A0 KDC Thuận Giao - 
+                            Thị Xã Thuận An -Tỉnh&nbsp; Bình Dương<br />
+                            CN : 149 Huỳnh Văn Lũy, Phường Phú Lợi, Thành Phố Thủ Dầu Một, Tỉnh Bình Dương<br />
+                            Tel: (0650)6 290.270 - Fax: (0650)6290269 HL: 0938.73.43.73
+                        </td>
+                        <td width="100px">
+                            Design by admin</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    </form>
+<%--================================uang cao 2 bên===========================--%>
+
+<%--
+     <div id="left_ads_float">
+
+        <a href="#" target="_blank"><img border="0" src="../img/quangcao_2ben_web/58a.png"  width="120" /></a></a><a> <br /> </a>
+         <a href="#" target="_blank"><img border="0" src="../img/quangcao_2ben_web/59.png"  width="120" /></a>
+
+    </div>
+
+    <div id="right_ads_float">
+
+       <a href="#" target="_blank"><img border="0" src="../img/quangcao_2ben_web/58b.png" width="120" /></a><a> <br /> </a>
+        <a href="#" target="_blank"><img border="0" src="../img/quangcao_2ben_web/60.png" width="120" /></a>
+    </div>
+
+<style>
+
+#left_ads_float
+
+{
+
+    top:24px;
+
+    left: 10px;
+
+    position:fixed; }
+
+#right_ads_float
+
+{
+
+    top:24px;
+
+    right: 10px;
+
+    position:fixed;
+
+}
+
+    </style>
+
+<script>
+
+    var vtlai_remove_fads = false;
+
+    function vtlai_check_adswidth() {
+
+        if (vtlai_remove_fads) {
+
+            document.getElementById('left_ads_float').style.display = 'none';
+
+            document.getElementById('right_ads_float').style.display = 'none';
+
+            return;
+
+        } else if (document.cookie.indexOf('vtlai_remove_float_ads') != -1) {
+
+            vtlai_remove_fads = true;
+
+            vtlai_check_adswidth();
+
+            return;
+
+        }
+
+        else {
+
+            var lwidth = parseInt(document.body.clientWidth);
+
+            if (lwidth < 1110) {
+
+                document.getElementById('left_ads_float').style.display = 'none';
+
+                document.getElementById('right_ads_float').style.display = 'none';
+
+            }
+
+            else {
+
+                document.getElementById('left_ads_float').style.display = 'block';
+
+                document.getElementById('right_ads_float').style.display = 'block';
+
+            }
+
+            setTimeout('vtlai_check_adswidth()', 10);
+
+        }
+
+    }
+
+</script>--%>
+    <%--===============================================================--%>
+    </body>
+</html>
